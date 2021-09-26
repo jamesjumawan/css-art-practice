@@ -1,0 +1,147 @@
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(indigo, violet);
+}
+
+.hot-air-balloon{
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+.balloon *{
+    width: 10vmax;
+    height: 10vmax;
+    display: flex;
+    place-content: center;
+    position: absolute;
+    clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%);
+}
+
+.left{
+    clip-path: polygon(0% 0%, 52% 0%, 55% 500%, 0% 500%);
+}
+
+.right{
+    clip-path: polygon(100% 0%, 48% 0%, 48% 500%, 100% 500%);
+}
+
+.layer1>*{
+    width: 8vmax;
+    height: 8vmax;
+    border-radius: 50%;
+}
+
+.layer2>*{
+    width: 6vmax;
+    height: 6vmax;
+    border-radius: 50%;
+}
+
+.layer3>*{
+    width: 4vmax;
+    height: 4vmax;
+    border-radius: 50%;
+}
+
+.layer1 .left{
+    background-color: #58aeff;
+
+}
+
+.layer2 .left{
+    background-color: #ffd086;
+}
+
+.layer3 .left{
+    background-color: #8ac8d3;
+}
+
+.layer1 .right{
+    background-color: #ffae79;
+}
+
+.layer2 .right{
+    background-color: #aed96d;
+}
+
+.layer3 .right{
+    background-color: #f8887a;
+}
+
+.balloon>.layer1>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transform: translateY(50%);
+
+}
+
+.balloon>.layer2>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 150%;
+    background-color: inherit;
+    transform: translateY(33.33%);
+
+}
+
+.balloon>.layer3>*::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 250%;
+    background-color: inherit;
+    transform: translateY(20%);
+
+}
+
+.balloon>.layer1>.left::before{
+    clip-path: polygon(6.7% 25%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer2>.left::before{
+    clip-path: polygon(2.85% 11.11%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer3>.left::before{
+    clip-path: polygon(1% 4%, 50% 0%, 50% 100%);
+}
+
+.balloon>.layer1>.right::before{
+    clip-path: polygon(93.3% 25%, 48% 0%, 48% 100%);
+}
+
+.balloon>.layer2>.right::before{
+    clip-path: polygon(97.15% 11.11%, 48% 0%, 48% 100%);
+}
+
+.balloon>.layer3>.right::before{
+    clip-path: polygon(99% 4%, 48% 0%, 48% 100%);
+}
+
+.basket{
+    display: flex;
+    place-self: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 2vmax;
+    height: 1.5vmax;
+    background-image: linear-gradient(rgb(167, 60, 60), 
+        rgb(139, 60, 60), rgb(105, 45, 45), rgb(109, 31, 31));
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transform: translate(200%, 12.5vmax);
+}
